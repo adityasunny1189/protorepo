@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option go_package = "github.com/adityasunny1189/protorepo/pb/golang/v1;helloworld";
+option java_package = "com.adityasunny1189.helloworld";
+
+service HelloWorld {
+    rpc SayHello (HelloRequest) returns (HelloResponse);
+}
+
+message HelloRequest {
+    string request = 1;
+}
+
+message HelloResponse {
+    string response = 1;
+}
